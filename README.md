@@ -13,6 +13,9 @@
 | RedWolf Recovery Project | [Actions](https://github.com/VThang51/Recovery-Builder-Workflows/actions/workflows/RWRP.yml) | [RWRP.yml](.github/workflows/RWRP.yml) |  |  |
 | (There will be more in the future) |  |  |  |  |
 
+## Note for PitchBlack Recovery Project:
+- In your device tree, open the file omni_<device>.mk (or twrp_<device>.mk or aosp_<device>.mk) and edit `vendor/omni...` to `vendor/pb` so you won't get an issue when building!
+
 - DON'T FORGET TO READ THE NOTES
 ## General Instructions
 - 1, Let's move to the `Actions` tab
