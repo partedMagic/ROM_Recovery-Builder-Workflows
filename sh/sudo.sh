@@ -18,6 +18,7 @@ sudo apt-get -y install bison
 sudo apt-get -y install aria2
 sudo apt-get -y install openjdk-8-jdk
 sudo apt-get -y install make
+sudo apt-get -y install python-is-python2
 
 sudo apt-get -y upgrade
 
