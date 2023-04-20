@@ -61,7 +61,7 @@ jobs:
 
       - name: Set up the Compilation environment
         run: |
-          bash sh/sudo.sh
+          bash sh/sudolegacy.sh
           cd ~
           git clone https://gitlab.com/OrangeFox/misc/scripts
           cd scripts
