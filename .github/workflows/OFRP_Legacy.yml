@@ -78,8 +78,8 @@ jobs:
       - name: Sync Source
         run: |
           cd ~/ofrp_sync/orangefox-legacy-git/
+          chmod a+x ./orangefox_sync_legacy.sh
           mkdir ~/ofrp
-          chmod a+x orangefox_sync_legacy.sh
           ./orangefox_sync_legacy.sh --branch ${{ inputs.BRANCH }} --path ~/ofrp
 
       - name: Clone Device Tree
