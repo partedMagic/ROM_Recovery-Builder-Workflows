@@ -1,0 +1,30 @@
+name: testing
+on:
+  workflow_dispatch:
+    inputs:
+      TEST:
+        description: 'test'
+        required: true
+        default: 'test'
+        type: choice
+        options:
+          - 'omni'
+jobs:
+  TeamWin-Recovery-Project:
+    runs-on: ubuntu-20.04
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@master
+
+      - name: Free up space
+        run: bash sh/uninlegacy.sh
+
+      - name: Set up the Compilation environment
+        run: bash sh/sudolegacy.sh
+
+      - name: final
+        run: |
+            python -V
+          
