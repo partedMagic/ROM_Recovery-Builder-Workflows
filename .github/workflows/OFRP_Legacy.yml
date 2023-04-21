@@ -89,6 +89,10 @@ jobs:
           cd ~/ofrp
           git clone -b ${{ inputs.DEVICE_TREE_BRANCH }} ${{ inputs.DEVICE_TREE_URL }} device/${{ inputs.BRAND }}/${{ inputs.DEVICE_CODE }}
           
+      - name: Removing python3 and making python2 default...
+        run: |
+          bash sh/aftersync.sh
+          
       - name: Compile Custom Recovery 
         run: |
           cd ~/ofrp
