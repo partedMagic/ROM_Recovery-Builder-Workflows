@@ -76,9 +76,13 @@ jobs:
           mkdir ~/ofrp_sync
           cd ~/ofrp_sync
           git clone https://github.com/partedMagic/orangefox-legacy-git.git
+          git config --global user.name "partedMagic"
+          git config --global user.email "imperium466@gmail.com"
 
       - name: Sync Source
         run: |
+          git config --global user.name "partedMagic"
+          git config --global user.email "imperium466@gmail.com"
           cd ~/ofrp_sync/orangefox-legacy-git/
           chmod a+x ./orangefox_sync_legacy.sh
           mkdir ~/ofrp
@@ -86,6 +90,8 @@ jobs:
 
       - name: Clone Device Tree
         run: |
+          git config --global user.name "partedMagic"
+          git config --global user.email "imperium466@gmail.com"
           cd ~/ofrp
           git clone -b ${{ inputs.DEVICE_TREE_BRANCH }} ${{ inputs.DEVICE_TREE_URL }} device/${{ inputs.BRAND }}/${{ inputs.DEVICE_CODE }}
           
