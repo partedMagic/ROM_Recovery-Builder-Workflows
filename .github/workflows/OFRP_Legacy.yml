@@ -113,7 +113,7 @@ jobs:
 
       - name: Rename File 
         run: |
-          mv ~/ofrp/out/target/product/${{ inputs.DEVICE_CODE }}/OrangeFox-unofficial-${{ inputs.DEVICE_CODE }}.img OrangeFox-unofficial-${{ inputs.DEVICE_CODE }}.img
+          mv ~/ofrp/out/target/product/${{ inputs.DEVICE_CODE }}/boot.img OrangeFox-unofficial-${{ inputs.DEVICE_CODE }}.img
 
       - name: Upload to Release
         uses: softprops/action-gh-release@v1
